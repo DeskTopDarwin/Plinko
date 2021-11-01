@@ -955,7 +955,7 @@ Transform:
   - {fileID: 980787728}
   - {fileID: 505915214}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505915213
 GameObject:
@@ -3337,6 +3337,7 @@ GameObject:
   - component: {fileID: 1723911671}
   - component: {fileID: 1723911673}
   - component: {fileID: 1723911672}
+  - component: {fileID: 1723911674}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3352,11 +3353,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723911670}
   m_LocalRotation: {x: -0.00006888943, y: 0.99990803, z: -0.012308584, w: -0.0056982813}
-  m_LocalPosition: {x: 0.77743936, y: -0.95222473, z: 13.536421}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 1.6487197, y: 18.763887, z: 7.4782104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2032508962}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1723911672
 AudioListener:
@@ -3409,6 +3410,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1723911674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723911670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550d626af3a6ed341b5ae58a0b2a8d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 2032508962}
 --- !u!1001 &1739106402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4374,8 +4388,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.26, y: 19.24, z: 0.71}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children:
-  - {fileID: 1723911671}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4391,6 +4404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058e1cb9d1eefbc4ba2d42b4622e8a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftWall: {fileID: 1091843387}
+  rightWall: {fileID: 1697840718}
 --- !u!1001 &2052504031
 PrefabInstance:
   m_ObjectHideFlags: 0

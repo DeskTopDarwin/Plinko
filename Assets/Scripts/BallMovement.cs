@@ -5,6 +5,9 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     Rigidbody rg;
+
+    public Transform leftWall;
+    public Transform rightWall;
     private void Awake()
     {
         rg = gameObject.GetComponent<Rigidbody>();
@@ -18,13 +21,20 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) && rg.isKinematic)
+        Debug.Log("t: " + transform.position.x);
+        Debug.Log("lw: " + leftWall.position.x);
+        if (Input.GetKey(KeyCode.LeftArrow) && rg.isKinematic && transform.position.x < leftWall.position.x)
         {
             transform.position = transform.position + new Vector3(1 * Time.deltaTime, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.RightArrow) && rg.isKinematic)
+        else if (Input.GetKey(KeyCode.RightArrow) && rg.isKinematic && transform.position.x > rightWall.position.x)
         {
             transform.position = transform.position + new Vector3(-1 * Time.deltaTime, 0, 0);
+        }
+        
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            rg.isKinematic = false;
         }
         
         //transform.position = transform.position + new Vector3(1, 0, 0);
