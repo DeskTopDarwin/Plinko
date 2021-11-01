@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 147598222}
   m_Layer: 0
   m_Name: Lose
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 393733332}
   m_Layer: 0
   m_Name: Lose
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 420213578}
   m_Layer: 0
   m_Name: Lose
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 1095419288}
   m_Layer: 0
   m_Name: Lose
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3055,7 +3055,7 @@ GameObject:
   - component: {fileID: 1569283153}
   m_Layer: 0
   m_Name: Win
-  m_TagString: Untagged
+  m_TagString: win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3507,7 +3507,7 @@ GameObject:
   - component: {fileID: 1745261394}
   m_Layer: 0
   m_Name: Lose
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4404,6 +4404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058e1cb9d1eefbc4ba2d42b4622e8a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 1
+  speed: 10
   leftWall: {fileID: 1091843387}
   rightWall: {fileID: 1697840718}
 --- !u!1001 &2052504031
