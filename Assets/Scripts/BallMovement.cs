@@ -9,20 +9,22 @@ public class BallMovement : MonoBehaviour
     public float speed;
     public Transform leftWall;
     public Transform rightWall;
+    public AudioSource winSound;
+    public AudioSource loseSound;
 
    
-    private Transform initialTransform;
+    //private Transform initialTransform;
     private bool isGameOver = false;
 
-    private void Awake()
+    public void Awake()
     {
         rg = gameObject.GetComponent<Rigidbody>();
-        initialTransform = transform;
-
+        //initialTransform = transform;
     }
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -45,9 +47,11 @@ public class BallMovement : MonoBehaviour
             rg.isKinematic = false;
         }
 
-        else if (Input.anyKeyDown && isGameOver)
+        if (Input.anyKey && isGameOver)
         {
-            transform.position = initialTransform.position;
+            Debug.Log("restart");
+            rg.isKinematic = true;
+            transform.position = new Vector3(0, 19.24f, 0.71f);
             isGameOver = false;
         }
     }
@@ -61,11 +65,13 @@ public class BallMovement : MonoBehaviour
         {
             Debug.Log("win");
             isGameOver = true;
+            winSound.Play();
         }
         else if(other.CompareTag(lose))
         {
             Debug.Log("lose");
             isGameOver = true;
+            loseSound.Play();
         }
     }
 }
